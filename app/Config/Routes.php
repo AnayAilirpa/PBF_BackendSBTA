@@ -35,5 +35,8 @@ $routes->get('User', 'User::index');
 $routes->post('User', 'User::Proses_tambah_user'); 
 $routes->get('User/(:any)', 'User::Edit_data_user/$1'); 
 $routes->put('User/(:any)', 'User::Proses_edit_user/$1');
-$routes->delete('User/(:any)', 'User::Hapus_data_user/$1'); 
+$routes->delete('User/(:any)', 'User::Hapus_data_user/$1');
+
+$routes->get('View', 'View::index'); 
+
 

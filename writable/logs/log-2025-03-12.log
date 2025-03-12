@@ -1014,3 +1014,67 @@ in APPPATH\Controllers\User.php on line 38.
  6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+CRITICAL - 2025-03-12 07:01:36 --> CodeIgniter\Exceptions\ModelException: "App\Models\ViewModel" model class does not specify a Primary Key.
+[Method: GET, Route: View]
+in SYSTEMPATH\Model.php on line 704.
+ 1 SYSTEMPATH\Model.php(704): CodeIgniter\Exceptions\ModelException::forNoPrimaryKey('App\\Models\\ViewModel')
+ 2 SYSTEMPATH\Model.php(273): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\View.php(13): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\View->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\View))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+ERROR - 2025-03-12 07:03:23 --> mysqli_sql_exception: Table 'tugas_akhir.nama_view' doesn't exist in C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT * FROM n...', 0)
+#1 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM n...')
+#2 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM n...')
+#3 C:\xampp\htdocs\Sistem_Tugas_Akhir\app\Controllers\View.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM n...')
+#4 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(933): App\Controllers\View->index()
+#5 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\View))
+#6 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Sistem_Tugas_Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2025-03-12 07:03:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'tugas_akhir.nama_view' doesn't exist
+[Method: GET, Route: View]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Controllers\View.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM nama_view')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\View->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\View))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+CRITICAL - 2025-03-12 07:03:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'tugas_akhir.nama_view' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM nama_view')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM nama_view')
+ 3 APPPATH\Controllers\View.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM nama_view')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\View->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\View))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+CRITICAL - 2025-03-12 07:03:23 --> [Caused by] mysqli_sql_exception: Table 'tugas_akhir.nama_view' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT * FROM nama_view', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM nama_view')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM nama_view')
+ 4 APPPATH\Controllers\View.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM nama_view')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\View->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\View))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
