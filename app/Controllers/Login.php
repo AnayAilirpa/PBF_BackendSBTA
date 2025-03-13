@@ -7,7 +7,7 @@ use App\Controllers\BaseController;
 class Login extends BaseController
 {
 
-    public function Proses_login()
+    public function login()
     {
         $db = \Config\Database::connect();
         $builder = $db->table('user');
@@ -30,7 +30,7 @@ class Login extends BaseController
         }
     
         // Verifikasi password
-        if (!password_verify($data['password'], $user['password'])) {
+        if ($data['password'] !== $user['password']) {
             return $this->response->setStatusCode(400)
                 ->setJSON(['status' => 'error', 'message' => 'Password salah']);
         }

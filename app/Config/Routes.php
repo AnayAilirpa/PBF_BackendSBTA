@@ -38,5 +38,6 @@ $routes->put('User/(:any)', 'User::Proses_edit_user/$1');
 $routes->delete('User/(:any)', 'User::Hapus_data_user/$1');
 
 $routes->get('View', 'View::index'); 
+$routes->post('Login', 'Login::login'); 
 
 
