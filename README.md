@@ -1,12 +1,12 @@
-# SI-KRS-Backend
+# SBTA-Backend
 
-Sistem Manajemen Kartu Rencana Studi (KRS) Online - Backend menggunakan CodeIgniter 4
+Sistem Bimbingan Tugas Akhir (TA) - Backend with CodeIgniter 4
 
 ## 📌 Cara Clone Repository
 
 ```bash
-git clone https://github.com/kristiandimasadiwicaksono/SI-KRS-Backend.git
-cd SI-KRS-Backend
+git clone https://github.com/AnayAilirpa/PBF_BackendSBTA.git
+cd SBTA-Backend
 ```
 
 ## 🔧 Instalasi dan Konfigurasi
@@ -22,7 +22,7 @@ cd SI-KRS-Backend
 3. **Edit file `.env` dan atur konfigurasi database**
    ```env
    database.default.hostname = localhost
-   database.default.database = nama_database
+   database.default.database = bimbingan
    database.default.username = root
    database.default.password = 
    database.default.DBDriver = MySQL
@@ -49,7 +49,7 @@ Secara default, server akan berjalan di `http://localhost:8080`.
 2. **Buka Postman**
 3. **Buat request baru**
    - **Method:** `GET`, `POST`, `PUT`, `DELETE`
-   - **URL:** `http://localhost:8080/api/nama-endpoint`
+   - **URL:** `http://localhost:8080/nama-endpoint`
 4. **Kirim request dan lihat response dari API**
 
 ---
