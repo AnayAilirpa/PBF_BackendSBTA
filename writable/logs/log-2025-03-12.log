@@ -1078,3 +1078,251 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
  9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+ERROR - 2025-03-12 07:19:57 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`tugas_akhir`.`tugas_akhir`, CONSTRAINT `tugas_akhir_ibfk_1` FOREIGN KEY (`npm`) REFERENCES `mahasiswa` (`npm`) ON DELETE CASCADE) in C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `mahasis...', 0)
+#1 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 C:\xampp\htdocs\Sistem_Tugas_Akhir\app\Controllers\Mahasiswa.php(90): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->Proses_edit_mahasiswa('230202047')
+#6 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Sistem_Tugas_Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-03-12 07:19:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`tugas_akhir`.`tugas_akhir`, CONSTRAINT `tugas_akhir_ibfk_1` FOREIGN KEY (`npm`) REFERENCES `mahasiswa` (`npm`) ON DELETE CASCADE)
+[Method: PUT, Route: Mahasiswa/230202047]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `npm` = :npm.2:, `nama` = :nama:, `angkatan` = :angkatan:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `npm` = :npm.1:', [...], false)
+ 2 APPPATH\Controllers\Mahasiswa.php(90): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->Proses_edit_mahasiswa('230202047')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+CRITICAL - 2025-03-12 07:19:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`tugas_akhir`.`tugas_akhir`, CONSTRAINT `tugas_akhir_ibfk_1` FOREIGN KEY (`npm`) REFERENCES `mahasiswa` (`npm`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `npm` = \'230102012\', `nama` = \'Asdfghjkl\', `angkatan` = \'2023\', `email` = \'qwerty@gmail.com\', `no_telp` = \'1234567890\'
+WHERE `npm` = \'230202047\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `npm` = \'230102012\', `nama` = \'Asdfghjkl\', `angkatan` = \'2023\', `email` = \'qwerty@gmail.com\', `no_telp` = \'1234567890\'
+WHERE `npm` = \'230202047\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `npm` = :npm.2:, `nama` = :nama:, `angkatan` = :angkatan:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `npm` = :npm.1:', [...], false)
+ 4 APPPATH\Controllers\Mahasiswa.php(90): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->Proses_edit_mahasiswa('230202047')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+CRITICAL - 2025-03-12 07:19:57 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`tugas_akhir`.`tugas_akhir`, CONSTRAINT `tugas_akhir_ibfk_1` FOREIGN KEY (`npm`) REFERENCES `mahasiswa` (`npm`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `mahasiswa` SET `npm` = \'230102012\', `nama` = \'Asdfghjkl\', `angkatan` = \'2023\', `email` = \'qwerty@gmail.com\', `no_telp` = \'1234567890\'
+WHERE `npm` = \'230202047\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `npm` = \'230102012\', `nama` = \'Asdfghjkl\', `angkatan` = \'2023\', `email` = \'qwerty@gmail.com\', `no_telp` = \'1234567890\'
+WHERE `npm` = \'230202047\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `npm` = \'230102012\', `nama` = \'Asdfghjkl\', `angkatan` = \'2023\', `email` = \'qwerty@gmail.com\', `no_telp` = \'1234567890\'
+WHERE `npm` = \'230202047\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `npm` = :npm.2:, `nama` = :nama:, `angkatan` = :angkatan:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `npm` = :npm.1:', [...], false)
+ 5 APPPATH\Controllers\Mahasiswa.php(90): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->Proses_edit_mahasiswa('230202047')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+ERROR - 2025-03-12 07:20:19 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`tugas_akhir`.`tugas_akhir`, CONSTRAINT `tugas_akhir_ibfk_1` FOREIGN KEY (`npm`) REFERENCES `mahasiswa` (`npm`) ON DELETE CASCADE) in C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `mahasis...', 0)
+#1 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasis...')
+#2 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasis...')
+#3 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasis...', Array, false)
+#4 C:\xampp\htdocs\Sistem_Tugas_Akhir\app\Controllers\Mahasiswa.php(90): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->Proses_edit_mahasiswa('230202047')
+#6 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Sistem_Tugas_Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-03-12 07:20:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`tugas_akhir`.`tugas_akhir`, CONSTRAINT `tugas_akhir_ibfk_1` FOREIGN KEY (`npm`) REFERENCES `mahasiswa` (`npm`) ON DELETE CASCADE)
+[Method: PUT, Route: Mahasiswa/230202047]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `npm` = :npm.2:, `nama` = :nama:, `angkatan` = :angkatan:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `npm` = :npm.1:', [...], false)
+ 2 APPPATH\Controllers\Mahasiswa.php(90): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->Proses_edit_mahasiswa('230202047')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+CRITICAL - 2025-03-12 07:20:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`tugas_akhir`.`tugas_akhir`, CONSTRAINT `tugas_akhir_ibfk_1` FOREIGN KEY (`npm`) REFERENCES `mahasiswa` (`npm`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `npm` = \'230102011\', `nama` = \'Qsdfghjkl\', `angkatan` = \'2023\', `email` = \'qwerty@gmail.com\', `no_telp` = \'1234567890\'
+WHERE `npm` = \'230202047\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `npm` = \'230102011\', `nama` = \'Qsdfghjkl\', `angkatan` = \'2023\', `email` = \'qwerty@gmail.com\', `no_telp` = \'1234567890\'
+WHERE `npm` = \'230202047\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `npm` = :npm.2:, `nama` = :nama:, `angkatan` = :angkatan:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `npm` = :npm.1:', [...], false)
+ 4 APPPATH\Controllers\Mahasiswa.php(90): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->Proses_edit_mahasiswa('230202047')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+CRITICAL - 2025-03-12 07:20:19 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`tugas_akhir`.`tugas_akhir`, CONSTRAINT `tugas_akhir_ibfk_1` FOREIGN KEY (`npm`) REFERENCES `mahasiswa` (`npm`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `mahasiswa` SET `npm` = \'230102011\', `nama` = \'Qsdfghjkl\', `angkatan` = \'2023\', `email` = \'qwerty@gmail.com\', `no_telp` = \'1234567890\'
+WHERE `npm` = \'230202047\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mahasiswa` SET `npm` = \'230102011\', `nama` = \'Qsdfghjkl\', `angkatan` = \'2023\', `email` = \'qwerty@gmail.com\', `no_telp` = \'1234567890\'
+WHERE `npm` = \'230202047\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mahasiswa` SET `npm` = \'230102011\', `nama` = \'Qsdfghjkl\', `angkatan` = \'2023\', `email` = \'qwerty@gmail.com\', `no_telp` = \'1234567890\'
+WHERE `npm` = \'230202047\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `mahasiswa` SET `npm` = :npm.2:, `nama` = :nama:, `angkatan` = :angkatan:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `npm` = :npm.1:', [...], false)
+ 5 APPPATH\Controllers\Mahasiswa.php(90): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->Proses_edit_mahasiswa('230202047')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+ERROR - 2025-03-12 07:50:09 --> mysqli_sql_exception: Duplicate entry '1111' for key 'PRIMARY' in C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `dosen_p...', 0)
+#1 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_p...')
+#2 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_p...')
+#3 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_p...', Array, false)
+#4 C:\xampp\htdocs\Sistem_Tugas_Akhir\app\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1331')
+#6 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Sistem_Tugas_Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-03-12 07:50:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1111' for key 'PRIMARY'
+[Method: PUT, Route: Dosen/1331]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 2 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1331')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+CRITICAL - 2025-03-12 07:50:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1111' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_pembimbing` SET `nidn` = \'1111\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1331\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_pembimbing` SET `nidn` = \'1111\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1331\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 4 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1331')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+CRITICAL - 2025-03-12 07:50:10 --> [Caused by] mysqli_sql_exception: Duplicate entry '1111' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `dosen_pembimbing` SET `nidn` = \'1111\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1331\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_pembimbing` SET `nidn` = \'1111\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1331\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_pembimbing` SET `nidn` = \'1111\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1331\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 5 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1331')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+ERROR - 2025-03-12 07:50:22 --> mysqli_sql_exception: Duplicate entry '5555' for key 'PRIMARY' in C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `dosen_p...', 0)
+#1 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_p...')
+#2 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_p...')
+#3 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_p...', Array, false)
+#4 C:\xampp\htdocs\Sistem_Tugas_Akhir\app\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1331')
+#6 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Sistem_Tugas_Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Sistem_Tugas_Akhir\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-03-12 07:50:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '5555' for key 'PRIMARY'
+[Method: PUT, Route: Dosen/1331]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 2 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1331')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+CRITICAL - 2025-03-12 07:50:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '5555' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_pembimbing` SET `nidn` = \'5555\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1331\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_pembimbing` SET `nidn` = \'5555\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1331\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 4 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1331')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
+CRITICAL - 2025-03-12 07:50:22 --> [Caused by] mysqli_sql_exception: Duplicate entry '5555' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `dosen_pembimbing` SET `nidn` = \'5555\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1331\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_pembimbing` SET `nidn` = \'5555\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1331\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_pembimbing` SET `nidn` = \'5555\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1331\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 5 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1331')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sistem_Tugas_Akhir\\public\\index.php')
