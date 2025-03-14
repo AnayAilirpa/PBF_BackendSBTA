@@ -9,6 +9,13 @@ git clone https://github.com/AnayAilirpa/PBF_BackendSBTA.git
 cd SBTA-Backend
 ```
 
+## 🛠️ Syarat Utama
+
+1. Instalasi **[Composer](https://getcomposer.org/Composer-Setup.exe)** dan **[PHP](https://www.php.net/downloads.php)**
+2. Download PHP (Versi 2 ke atas)
+3. Simpan file Composer ke PHP.exe
+4. Restrat Laptop
+   
 ## 🔧 Instalasi dan Konfigurasi
 
 1. **Install Dependencies**
