@@ -1,0 +1,186 @@
+ERROR - 2025-05-17 02:34:56 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT) in C:\laragon\www\PBF_BackendSBTA-main\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\PBF_BackendSBTA-main\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `dosen_p...', 0)
+#1 C:\laragon\www\PBF_BackendSBTA-main\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_p...')
+#2 C:\laragon\www\PBF_BackendSBTA-main\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_p...')
+#3 C:\laragon\www\PBF_BackendSBTA-main\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_p...', Array, false)
+#4 C:\laragon\www\PBF_BackendSBTA-main\app\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\laragon\www\PBF_BackendSBTA-main\system\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+#6 C:\laragon\www\PBF_BackendSBTA-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 C:\laragon\www\PBF_BackendSBTA-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\PBF_BackendSBTA-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\PBF_BackendSBTA-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\PBF_BackendSBTA-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\PBF_BackendSBTA-main\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2025-05-17 02:34:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[Method: PUT, Route: Dosen/1111]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 2 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\PBF_BackendSBTA-main\\public\\index.php')
+CRITICAL - 2025-05-17 02:34:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 4 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\PBF_BackendSBTA-main\\public\\index.php')
+CRITICAL - 2025-05-17 02:34:56 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 5 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\PBF_BackendSBTA-main\\public\\index.php')
+ERROR - 2025-05-17 02:35:43 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT) in C:\laragon\www\PBF_BackendSBTA-main\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\PBF_BackendSBTA-main\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `dosen_p...', 0)
+#1 C:\laragon\www\PBF_BackendSBTA-main\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_p...')
+#2 C:\laragon\www\PBF_BackendSBTA-main\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_p...')
+#3 C:\laragon\www\PBF_BackendSBTA-main\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_p...', Array, false)
+#4 C:\laragon\www\PBF_BackendSBTA-main\app\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\laragon\www\PBF_BackendSBTA-main\system\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+#6 C:\laragon\www\PBF_BackendSBTA-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 C:\laragon\www\PBF_BackendSBTA-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\PBF_BackendSBTA-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\PBF_BackendSBTA-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\PBF_BackendSBTA-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\PBF_BackendSBTA-main\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2025-05-17 02:35:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[Method: PUT, Route: Dosen/1111]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 2 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\PBF_BackendSBTA-main\\public\\index.php')
+CRITICAL - 2025-05-17 02:35:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 4 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\PBF_BackendSBTA-main\\public\\index.php')
+CRITICAL - 2025-05-17 02:35:43 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 5 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\PBF_BackendSBTA-main\\public\\index.php')
+ERROR - 2025-05-17 02:37:19 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT) in C:\laragon\www\PBF_BackendSBTA-main\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\PBF_BackendSBTA-main\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `dosen_p...', 0)
+#1 C:\laragon\www\PBF_BackendSBTA-main\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_p...')
+#2 C:\laragon\www\PBF_BackendSBTA-main\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_p...')
+#3 C:\laragon\www\PBF_BackendSBTA-main\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_p...', Array, false)
+#4 C:\laragon\www\PBF_BackendSBTA-main\app\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\laragon\www\PBF_BackendSBTA-main\system\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+#6 C:\laragon\www\PBF_BackendSBTA-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 C:\laragon\www\PBF_BackendSBTA-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\PBF_BackendSBTA-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\PBF_BackendSBTA-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\PBF_BackendSBTA-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\PBF_BackendSBTA-main\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2025-05-17 02:37:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[Method: PUT, Route: Dosen/1111]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 2 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\PBF_BackendSBTA-main\\public\\index.php')
+CRITICAL - 2025-05-17 02:37:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 4 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\PBF_BackendSBTA-main\\public\\index.php')
+CRITICAL - 2025-05-17 02:37:19 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bimbingan`.`jadwal_bimbingan`, CONSTRAINT `jadwal_bimbingan_ibfk_2` FOREIGN KEY (`nidn`) REFERENCES `dosen_pembimbing` (`nidn`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `dosen_pembimbing` SET `nidn` = \'114444\', `nama` = \'pak abdau\', `email` = \'bcshgdqegcj\', `no_telp` = \'1234567890\'
+WHERE `nidn` = \'1111\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `dosen_pembimbing` SET `nidn` = :nidn.2:, `nama` = :nama:, `email` = :email:, `no_telp` = :no_telp:
+WHERE `nidn` = :nidn.1:', [...], false)
+ 5 APPPATH\Controllers\Dosen.php(80): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dosen->Proses_edit_dosen('1111')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\PBF_BackendSBTA-main\\public\\index.php')

@@ -1,0 +1,17 @@
+INFO - 2025-05-23 14:24:51 --> Password dari frontend: amel123
+INFO - 2025-05-23 14:24:51 --> Password dari database: $2y$12$WlzRyEsTT3pvp5AhsW2.DuYGwIRAUTSga.ufxNE0CdUOevXmkDmlW
+INFO - 2025-05-23 14:25:43 --> Password dari frontend: admin123
+INFO - 2025-05-23 14:25:43 --> Password dari database: $2y$10$GCeZDNohpPRKnEhkWIuM8e0mnAdX5gl0dbXivts8YCwFAN.fY18Sm
+DEBUG - 2025-05-23 14:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 21:03:47 --> Password dari frontend: dosen123
+INFO - 2025-05-23 21:03:47 --> Password dari database: $2y$12$qvbD.DklFf/RC4G9bp6K0OpWE4MR9VMuw5bTPu6ANRK9ZW3sPNbmC
+INFO - 2025-05-23 21:08:05 --> Password dari frontend: dosen123
+INFO - 2025-05-23 21:08:05 --> Password dari database: $2y$12$qvbD.DklFf/RC4G9bp6K0OpWE4MR9VMuw5bTPu6ANRK9ZW3sPNbmC
+INFO - 2025-05-23 21:08:36 --> Password dari frontend: admin123
+INFO - 2025-05-23 21:08:36 --> Password dari database: $2y$10$GCeZDNohpPRKnEhkWIuM8e0mnAdX5gl0dbXivts8YCwFAN.fY18Sm
+DEBUG - 2025-05-23 21:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 21:09:37 --> Password dari frontend: admin123
+INFO - 2025-05-23 21:09:37 --> Password dari database: $2y$10$GCeZDNohpPRKnEhkWIuM8e0mnAdX5gl0dbXivts8YCwFAN.fY18Sm
+DEBUG - 2025-05-23 21:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 21:09:49 --> Password dari frontend: dosen123
+INFO - 2025-05-23 21:09:49 --> Password dari database: $2y$12$qvbD.DklFf/RC4G9bp6K0OpWE4MR9VMuw5bTPu6ANRK9ZW3sPNbmC

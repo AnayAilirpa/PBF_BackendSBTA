@@ -30,10 +30,13 @@ class Login extends BaseController
         }
     
         // Verifikasi password
-        if ($data['password'] !== $user['password']) {
-            return $this->response->setStatusCode(400)
-                ->setJSON(['status' => 'error', 'message' => 'Password salah']);
-        }
+        log_message('info', 'Password dari frontend: ' . $data['password']);
+log_message('info', 'Password dari database: ' . $user['password']);
+        if (!password_verify($data['password'], $user['password'])) {
+    return $this->response->setStatusCode(400)
+        ->setJSON(['status' => 'error', 'message' => 'Password salah']);
+}
+
     
         // Simpan session atau token jika berhasil login
         $session = session();

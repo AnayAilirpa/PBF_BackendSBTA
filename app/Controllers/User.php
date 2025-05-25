@@ -35,7 +35,10 @@ class User extends BaseController
         }
     
         unset($data['id_user']);
-    
+    if (!empty($data['password'])) {
+    $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+}
+
         if ($builder->insert($data)) {
             return $this->response->setStatusCode(201)
                 ->setJSON([
