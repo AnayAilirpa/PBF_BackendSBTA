@@ -1,0 +1,43 @@
+INFO - 2025-05-26 02:08:13 --> Password dari frontend: mahasiswa123
+INFO - 2025-05-26 02:08:13 --> Password dari database: $2y$10$vOi7QAzO6/G76unltHc7AOWh31Idqy6.BrpG2xrCB2lgdywW/1/b6
+DEBUG - 2025-05-26 02:08:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-26 02:36:45 --> ArgumentCountError: Too few arguments to function App\Controllers\Notifikasi::jumlah_belum_dibaca(), 1 passed in C:\xampp\htdocs\PBF-SBTA-Kelompok3\PBF_Backend-main\system\CodeIgniter.php on line 933 and exactly 2 expected
+[Method: GET, Route: Notifikasi/jumlah_belum_dibaca/dosen/1111]
+in APPPATH\Controllers\Notifikasi.php on line 77.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifikasi->jumlah_belum_dibaca('1111')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifikasi))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\PBF-SBTA-Kelompok3\\PBF_Backend-main\\public\\index.php')
+CRITICAL - 2025-05-26 02:37:01 --> ArgumentCountError: Too few arguments to function App\Controllers\Notifikasi::jumlah_belum_dibaca(), 1 passed in C:\xampp\htdocs\PBF-SBTA-Kelompok3\PBF_Backend-main\system\CodeIgniter.php on line 933 and exactly 2 expected
+[Method: GET, Route: Notifikasi/jumlah_belum_dibaca/dosen/1111]
+in APPPATH\Controllers\Notifikasi.php on line 77.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifikasi->jumlah_belum_dibaca('1111')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifikasi))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\PBF-SBTA-Kelompok3\\PBF_Backend-main\\public\\index.php')
+CRITICAL - 2025-05-26 02:38:33 --> ArgumentCountError: Too few arguments to function App\Controllers\Notifikasi::jumlah_belum_dibaca(), 1 passed in C:\xampp\htdocs\PBF-SBTA-Kelompok3\PBF_Backend-main\system\CodeIgniter.php on line 933 and exactly 2 expected
+[Method: GET, Route: Notifikasi/jumlah_belum_dibaca/dosen/1111]
+in APPPATH\Controllers\Notifikasi.php on line 77.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifikasi->jumlah_belum_dibaca('1111')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifikasi))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\PBF-SBTA-Kelompok3\\PBF_Backend-main\\public\\index.php')
+CRITICAL - 2025-05-26 02:38:40 --> ArgumentCountError: Too few arguments to function App\Controllers\Notifikasi::jumlah_belum_dibaca(), 1 passed in C:\xampp\htdocs\PBF-SBTA-Kelompok3\PBF_Backend-main\system\CodeIgniter.php on line 933 and exactly 2 expected
+[Method: GET, Route: Notifikasi/jumlah_belum_dibaca/mahasiswa/230202047]
+in APPPATH\Controllers\Notifikasi.php on line 77.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifikasi->jumlah_belum_dibaca('230202047')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifikasi))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\PBF-SBTA-Kelompok3\\PBF_Backend-main\\public\\index.php')

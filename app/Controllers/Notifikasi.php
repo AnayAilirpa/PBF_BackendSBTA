@@ -73,4 +73,20 @@ class Notifikasi extends BaseController
 
         return $this->respond(['message' => 'Notifikasi ditandai sebagai sudah dibaca']);
     }
+    // GET: Jumlah notifikasi belum dibaca (mahasiswa atau dosen)
+    public function jumlah_belum_dibaca($tipe, $id)
+    {
+        if (!in_array($tipe, ['mahasiswa', 'dosen'])) {
+            return $this->failValidationErrors("Tipe harus 'mahasiswa' atau 'dosen'");
+        }
+
+        $field = $tipe === 'mahasiswa' ? 'penerima_npm' : 'penerima_nidn';
+
+        $jumlah = $this->notifikasiModel
+            ->where($field, $id)
+            ->where('status_dibaca', 0)
+            ->countAllResults();
+
+        return $this->respond(['jumlah' => $jumlah]);
+    }
 }

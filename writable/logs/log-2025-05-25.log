@@ -67,3 +67,12 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
 13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\PBF-SBTA-Kelompok3\\PBF_Backend-main\\public\\index.php')
+INFO - 2025-05-25 12:46:50 --> Password dari frontend: admin123
+INFO - 2025-05-25 12:46:50 --> Password dari database: $2y$10$TGdS0pj0.0mrXj2fAAprAec27zyACmXLzsMAjAyr8ebHHScGpGptu
+DEBUG - 2025-05-25 12:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-25 12:48:23 --> Password dari frontend: dosen123
+INFO - 2025-05-25 12:48:23 --> Password dari database: $2y$10$PKfiNQQiQUO2DfnDE4ApW.TDMrDHF413uUzGQbj6/KnKtxcUYFlAC
+DEBUG - 2025-05-25 12:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-25 12:49:07 --> Password dari frontend: mahasiswa123
+INFO - 2025-05-25 12:49:07 --> Password dari database: $2y$10$vOi7QAzO6/G76unltHc7AOWh31Idqy6.BrpG2xrCB2lgdywW/1/b6
+DEBUG - 2025-05-25 12:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

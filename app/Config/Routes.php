@@ -41,6 +41,8 @@ $routes->get('Notifikasi/mahasiswa/(:any)', 'Notifikasi::notifikasi_mahasiswa/$1
 $routes->get('Notifikasi/dosen/(:any)', 'Notifikasi::notifikasi_dosen/$1');
 $routes->post('Notifikasi', 'Notifikasi::tambah_data_notifikasi');
 $routes->put('Notifikasi/(:any)', 'Notifikasi::tandai_sudah_dibaca/$1');
+$routes->get('Notifikasi/jumlah_belum_dibaca/mahasiswa/(:any)', 'Notifikasi::jumlah_belum_dibaca/mahasiswa/$1');
+$routes->get('Notifikasi/jumlah_belum_dibaca/dosen/(:any)', 'Notifikasi::jumlah_belum_dibaca/dosen/$1');
 
 $routes->get('View', 'View::index'); 
 $routes->post('Login', 'Login::login'); 
