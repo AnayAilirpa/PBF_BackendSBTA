@@ -2,6 +2,8 @@
 
 Sistem Bimbingan Tugas Akhir (TA) - Backend with CodeIgniter 4
 
+CodeIgniter 4 adalah framework PHP open-source yang dirancang untuk membangun aplikasi web dengan cepat, efisien, dan modern.
+
 ## 📌 Cara Clone Repository
 
 ```bash
