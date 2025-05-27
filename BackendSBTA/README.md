@@ -64,6 +64,31 @@ Secara default, server akan berjalan di `http://localhost:8080`.
    - 📥 **Klik link berikut untuk mengimpor collection ke Postman:**
    - 👉 **[BackEndSBTA API Collection - Postman](https://app.getpostman.com/join-team?invite_code=08d5f171b92ee6b02d29696bb2270509a5c3e0d4d110b2c9b9afe05b0463897c&target_code=a9d1f96f57cb1c248814055f7e505d83)**
    - ⚠️ **PERHATIAN:** Silakan hubungi saya terlebih dahulu untuk mendapatkan akses atau konfirmasi sebelum mencoba mengakses koleksinya. (bukan akun premium)
+  
+## 📄 Dokumentasi Tambahan
+
+1. **Postman Collection (Endpoint API)**
+
+   Saya juga sudah menyiapkan dan mengupload file Postman Collection agar memudahkan testing API secara offline atau jika link undangan Postman bermasalah.
+
+   - 📥 Folder Collection: `BackEndSBTA-PostmanCollection` 
+   - 📍 Cara impor manual di Postman:
+      1. Buka Postman
+      2. Klik "Import"
+      3. Pilih file PostmanCollection.json
+      4. Drag and drop
+   
+2. **Backup Database (MySQL)**
+
+   Untuk memudahkan setup lokal dan menjaga konsistensi data, saya juga sudah mengupload file backup SQL database.
+
+   - 📦 Folder Database: `DatabaseSBTA-backup`
+   - 🧰 Cara restore di phpMyAdmin:
+      1. Buka http://localhost/phpmyadmin
+      2. Buat database baru: bimbingan
+      3. Masuk ke database tersebut → Klik "Import"
+      4. Pilih file database
+      5. Klik "Go"
 
 ---
 💡 Pastikan database sudah dikonfigurasi dengan benar dan migrasi telah dijalankan. 🚀
