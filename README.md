@@ -9,6 +9,13 @@ git clone https://github.com/AnayAilirpa/PBF_BackendSBTA.git
 cd SBTA-Backend
 ```
 
+## 🛠️ Syarat Utama
+
+1. Instalasi **[Composer](https://getcomposer.org/Composer-Setup.exe)** dan **[PHP](https://www.php.net/downloads.php)**
+2. Download PHP (Sesuaikan dengan versi PHP anggota kelompok)
+3. Simpan Composer ke direktori php.exe.
+4. Restart Laptop atau PC
+
 ## 🔧 Instalasi dan Konfigurasi
 
 1. **Install Dependencies**
@@ -51,6 +58,10 @@ Secara default, server akan berjalan di `http://localhost:8080`.
    - **Method:** `GET`, `POST`, `PUT`, `DELETE`
    - **URL:** `http://localhost:8080/nama-endpoint`
 4. **Kirim request dan lihat response dari API**
+5. **(Opsional) Gunakan Postman Collection yang sudah disiapkan
+   - 📥 Klik link berikut untuk mengimpor collection ke Postman:**
+   - 👉 **[BackEndSBTA API Collection - Postman](https://app.getpostman.com/join-team?invite_code=08d5f171b92ee6b02d29696bb2270509a5c3e0d4d110b2c9b9afe05b0463897c&target_code=a9d1f96f57cb1c248814055f7e505d83)**
+   - ⚠️ **PERHATIAN:** Silakan hubungi saya terlebih dahulu untuk mendapatkan akses atau konfirmasi sebelum mencoba mengakses koleksinya. (bukan akun premium)
 
 ---
 💡 Pastikan database sudah dikonfigurasi dengan benar dan migrasi telah dijalankan. 🚀
