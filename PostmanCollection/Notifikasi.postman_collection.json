@@ -38,7 +38,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/Notifikasi/Mahasiswa/230202047",
+					"raw": "http://localhost:8080/Notifikasi/mahasiswa/230202047",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -46,7 +46,7 @@
 					"port": "8080",
 					"path": [
 						"Notifikasi",
-						"Mahasiswa",
+						"mahasiswa",
 						"230202047"
 					]
 				},
@@ -84,7 +84,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/Notifikasi/Dosen/1111",
+					"raw": "http://localhost:8080/Notifikasi/dosen/1111",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -92,7 +92,7 @@
 					"port": "8080",
 					"path": [
 						"Notifikasi",
-						"Dosen",
+						"dosen",
 						"1111"
 					]
 				},
@@ -166,7 +166,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"penerima_npm\": \"230202047\",\n  \"judul\": \"Jadwal Bimbingan\",\n  \"pesan\": \"Kamu ada bimbingan besok jam 10 pagi.\"\n}",
+					"raw": "{\n  \"penerima_nidn\": \"1111\",\n  \"judul\": \"Jadwal Bimbingan\",\n  \"pesan\": \"Kamu ada bimbingan besok jam 10 pagi.\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
